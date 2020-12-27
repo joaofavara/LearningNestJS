@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { User } from '../entity/user.entity';
+import { User } from './entity/user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
@@ -16,6 +16,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 
         async create(body: User): Promise<Object> {
             console.log(body);
-            return await this.usersRepository.insert(body);
+            return await this.usersRepository.save(body);
         }
     }

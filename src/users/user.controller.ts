@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Req } from '@nestjs/common';
 import { UserService } from './user.service';
 import { Request } from 'express';
-import { User } from '../entity/user.entity';
+import { User } from './entity/user.entity';
 
 @Controller('user')
 export class UserController {
